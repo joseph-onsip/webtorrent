@@ -30,6 +30,9 @@ test_script:
   # run tests
   - npm run test
 
+ after_test:
+  - ps: Get-Content C:\projects\webtorrent\npm-debug.log
+
 # Don't actually build.
 # https://www.appveyor.com/docs/lang/nodejs-iojs#quick-start
 build: off
